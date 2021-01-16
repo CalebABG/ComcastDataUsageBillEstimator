@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Estimator
 {
@@ -47,9 +46,10 @@ namespace Estimator
             var laptop2 = new Device("Laptop 2", dataInGbUsedPerDay: 5);
             var laptop3 = new Device("Laptop 3", dataInGbUsedPerDay: 5);
 
-            var estimator = new Estimator.UsageEstimator(new List<Device>
+            var estimator = new UsageEstimator(new()
             {
-                tv1, tv2, tv3, laptop1, laptop2, laptop3
+                tv1, tv2, tv3,
+                laptop1, laptop2, laptop3
             });
 
             Console.WriteLine(estimator.GenerateReport());

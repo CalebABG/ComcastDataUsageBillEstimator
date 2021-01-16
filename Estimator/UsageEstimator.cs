@@ -11,7 +11,7 @@ namespace Estimator
             Devices = devices ?? throw new ArgumentNullException(nameof(devices));
         }
 
-        public List<Device> Devices { get; set; }
+        public List<Device> Devices { get; }
 
         public decimal OverageCostPerMonthInDollars { get; } = 10;
         public decimal OverageThresholdPerMonthInGb { get; } = 50;
